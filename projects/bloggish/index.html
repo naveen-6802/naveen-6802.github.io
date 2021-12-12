@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+  <meta name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+     user-scalable=0' >
+	<title>BLOGGISH</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main_style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+<link rel="icon" href="../../favicon/f32.ico" type="image/gif" sizes="32x32" />
+<link rel="icon" href="../../favicon/f64.ico" type="image/gif" sizes="64x64" />
+</head>
+<body class="dark-theme">
+
+<span style="margin-left: 10px;" id="thm-btn">
+  <ion-icon id="moon" name="moon" style="padding-right: 10px;color:;"></ion-icon>
+</span>
+
+<div id="mobile-content">
+<div class="top">
+<div class="header">
+	<div id="hdr_logo" style="padding: 10px;margin-top: -2px;text-align: center;"><div style="padding-left: 8px;padding-top: 4px;text-align: center;" id="c-lg-m"><div id="mlogo"></div></div></div>
+	
+  <div class="menu-hdr" style="display: none;">
+    <a href="#home" class="active"><ion-icon name="home-outline" style="color: #256bfb;font-size: 20px;"></ion-icon></a>
+    <a href=""><ion-icon name="book-outline"></ion-icon></a>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > 220) {
+            $(".header").css("bo-shadow", "0 1px 2px rgba(0,0,0,0.02), 0 2px 4px rgba(0,0,0,0.02), 0 4px 8px rgba(0,0,0,0.02), 0 8px 16px rgba(0,0,0,0.02),0 16px 32px rgba(0,0,0,0.02), 0 32px 64px rgba(0,0,0,0.02)");
+        } else {
+            $(".header").css("box-shadow", "0 0 0 0");
+        }
+    });
+});
+  </script>
+
+
+<div id="search-ms">
+  <div style="position: relative;">
+
+    <ion-icon name="close" id="sms-back" onclick="document.getElementById('search-ms').style.display = 'none';"></ion-icon>
+    <script type="text/javascript">
+      document.getElementById("sms-back").addEventListener("click", function() {
+        document.getElementById("mobile-si").reset();
+      });
+    </script>
+    <div id="womain-m">
+      <div style="margin: auto;width:100%;background: transparent;padding:0px;box-sizing: border-box;" id="wmn-a">
+        <form action="get-details.php" method="post" id="mobile-si">
+          <div style="display: flex;width: 100%;">
+            <button type="submit" name="submit" class="sbbtn-m" disabled=""><ion-icon name="search-sharp"></ion-icon></button>
+            <input type="text" name="search" placeholder="Search..." autocomplete="off" required class="search-m">
+            <div class="input-group-append">
+            
+            </div>
+          </div>
+        </form>
+      </div>
+      <div>
+          <ul id="sl-m"></ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="hamburger">
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+ 
+<div id="side-menu">
+
+	<div id="menu-content">
+
+		<a href="javascript:void(0)" class="activea" style="color: #256bfb;" id="mccal"><span style="padding-right: 10px;"><ion-icon name="home-sharp" style="color: #256bfb;"></ion-icon></span><b style="padding-top: 5px;">Home</b></a><br/>
+    <a href="#" sstyle="background: rgb(51,58,73);border-radius:25px;width: 75%;margin: auto;"><span style="padding-right: 10px;"><ion-icon name="archive"></ion-icon></span><b style="padding-top: 4px;">Archive</b></a><br/><br/>
+    <a href="#" sstyle="background: rgb(51,58,73);border-radius:25px;width: 75%;margin: auto;"><span style="padding-right: 10px;"><ion-icon name="pricetag"></ion-icon></span><b style="padding-top: 4px;">View by Tags</b></a><br/><br/>
+    <a href="#"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="information-circle"></ion-icon></div></span>About Us</a><br/>
+    <a href="#"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="mail"></ion-icon></div></span>Contact Us</a><br/>
+    <a href="#"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="newspaper"></ion-icon></div></span>Privacy Policy</a><br/>
+    <a href="#" id="mc-more-m" style="display: none;"><span style="padding-right: 10px;"><ion-icon name="arrow-down-circle"></ion-icon></span><b style="padding-top: 4px;">More Pages</b></a>
+    <div id="mcc-more-m" style="padding-left: 20px;display: none;">
+      <a href="" style="font-size: 15px">About Us</a><br/>
+      <a href="" style="font-size: 15px">Contact Us</a><br/>
+      <a href="" style="font-size: 15px">Privacy Policy</a>
+    </div><br/>
+    <script type="text/javascript">
+      var mbm = document.getElementById("mc-more-m");
+      var bmm = document.getElementById("mcc-more-m");
+      mbm.addEventListener("click", function() {
+        if (bmm.style.display === "none") {
+          bmm.style.display = "block";
+        }
+        else {
+          bmm.style.display = "none";
+        }
+      });
+    </script>
+	</div>
+</div>
+<div id="prevent"></div>
+
+<script type="text/javascript">
+	var burger = document.getElementById("hamburger");
+	var sm = document.getElementById("side-menu");
+	var pvt = document.getElementById("prevent");
+	burger.addEventListener("click", function() {
+		sm.style.left = "0px";
+		pvt.style.display = 'block';
+	});
+	pvt.addEventListener("click", function() {
+		sm.style.left = "-150%";
+		pvt.style.display = 'none';
+	});
+
+</script>
+
+</div><br>
+<style type="text/css">
+  @keyframes banimate {
+      0% {
+        margin-left: -100px;
+      }
+      100% {
+        margin-left: 0;
+      }
+}
+</style>
+<div id="hbanner" onclick="document.getElementById('search-ms').style.display = 'block';">
+    <button style="padding: 10px;font-size: 17px;background: white;border: none;box-sizing: border-box;border-radius: 0px;border-top-left-radius: 25px;border-bottom-left-radius: 25px;">
+      <ion-icon name="search" id="lnr-magnifier"></ion-icon>
+    </button>
+    <input type="text" name="" placeholder="Search..." disabled="true" />
+</div>
+
+<div id="mcc">
+  <br/>
+  <form method="POST" id="Popup-Form-m">
+        
+        <p style="font-size: 14px;">Subscribe to our newsletter to receive latest post notification first.</p>
+          <input type="email" name="subsemail" required="" id="subsemail" placeholder="E-Mail Address"><br/><br/>
+          <input type="submit" name="" style="box-sizing: border-box;border-radius: 0px;
+          border:1px solid #256bfb;padding: 10px;width: 100%;text-align: center;color: white;background-color: #256bfb;font-weight: bold;border-radius: 6px;" value="Subscribe">
+        </form>
+<ul id="cards" style="list-style: none;">
+	<li class="card" style="display: flex;justify-content: center;align-items: center;padding: 5px;">
+<style>#card-hdr-m {
+      padding: 15px;
+      display: flex;
+      background: transparent;
+      border:none;
+      border-botto: 1px solid rgb(219,221,225);
+    }
+.dark-theme #card-hdr-m {
+  border-botto:1px solid rgb(66,66,66);
+}
+    </style>
+  <div style="text-align:center;margin: auto;">
+    <b style="text-align:center;color: rgb(4,189,101);">POSTS <ion-icon name="color-wand"></ion-icon></b>
+      <br/>
+    </div>
+  </li>
+</ul>
+<div id="load_data_message"></div>
+</div>
+<a href="javascript:void(0);" id="btt-m"><ion-icon name="arrow-up-outline"></ion-icon></a>
+
+<script type="text/javascript">
+  // ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        
+        $('#btt-m').fadeIn(200);    
+    } else {
+        $('#btt-m').fadeOut(200);   
+    }
+});
+$('#btt-m').click(function() {      
+    $('body,html').animate({
+        scrollTop : 0                       
+    }, 400);
+});
+ </script>
+<br/><br/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</div>
+
+<div id="computer-content">
+
+
+
+
+<div id="wmn-main">
+  <span onclick="this.parentElement.style.display = 'none';" id="wmn-main-d">&times;</span>
+  <script type="text/javascript">
+      document.getElementById("wmn-main-d").addEventListener("click", function() {
+        document.getElementById("computer-si").reset();
+      });
+    </script>
+<div id="womain">
+      <div style="margin: auto;width:100%;background: transparent;padding:0px;box-sizing: border-box;">
+        <form action="get-details.php" method="post" id="computer-si">
+          <div style="display: flex;width: 100%;">
+            <button type="submit" name="submit" class="sbbtn" disabled=""><ion-icon name="search-sharp"></ion-icon></button>
+            <input type="text" name="search" placeholder="Search..." autocomplete="off" required class="search">
+            <div class="input-group-append">
+              
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div>
+          <ul id="sl"></ul>
+      </div>
+
+</div>
+</div>
+
+<div id="topBar">
+    <h2 id="c-lg"><div style="padding-left:0px;padding-top: 5px;margin-left: -5%"><div id="dlogo"></div></div></h2>
+</div>
+
+
+<div id="content">
+  <br/>
+  <div>
+  
+	<ul id="cards-c" class="darks" style="list-style-type: none;">
+		<li class="card-c" style="display: flex;justify-content: center;align-items: center;padding: 5px;">
+<style>#card-hdr {
+      padding: 15px;
+      display: flex;
+      background: transparent;
+      border:none;
+      border-botto: 1px solid rgb(219,221,225);
+    }
+.dark-theme #card-hdr {
+  border-botto:1px solid rgb(66,66,66);
+}
+    </style>
+<b style="text-align: center;color: rgb(4,189,101);">POSTS <ion-icon name="color-wand"></ion-icon></b>
+  </li>
+</ul>
+<br/><br/>
+<div id="load_data_message-c"></div>
+</div>
+</div>
+
+<div id="morearticles">
+  <form method="POST" id="Popup-Form">
+        
+        <p style="font-size: 14px;">Subscribe to our newsletter to receive latest post notification first.</p>
+          <input type="email" name="subsemail" required="" id="subsemail" placeholder="E-Mail Address"><br/><br/>
+          <input type="submit" name="" style="box-sizing: border-box;border-radius: 0px;
+          border:1px solid #256bfb;padding: 10px;width: 100%;text-align: center;color: white;background-color: #256bfb;font-weight: bold;border-radius: 6px;" value="Subscribe">
+</form>
+<br/>
+  <div id="mah">
+    <strong style="text-align: center;font-size: 15px;">Top Articles</strong>
+  </div>
+  <div id="ma">
+    <a href="#"><div>Article 1</div></a>
+    <a href="#"><div>Article 2</div></a>
+    <a href="#"><div>Article 3</div></a>
+  </div>
+</div>
+
+<div id="leftBar">
+  <div id="menu-content-computer" style="font-size: 16px">
+    <div style="padding: 0px;">
+    <div style="width: 30%;height: 1px;background: rgb(124,129,145);margin-top: -5px;margin-left: 9px;"></div><br/>
+    <a href="javascript:void(0);" style="color: #256bfb" id="mccal"><span style="padding-right: 10px;"><div style="height: 22px;width: 22px;"><ion-icon name="home-sharp" style="color: #256bfb"></ion-icon></div></span>Home</a>
+    <a href="#"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="archive"></ion-icon></div></span>Archive</a>
+    <br/>
+    <a href="#"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="pricetag"></ion-icon></div></span>View by Tags</a>
+    <a href="#" onclick="document.getElementById('wmn-main').style.display = 'block';"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="search"></ion-icon></div></span>Search</a>
+    <br/>
+    <a href="#"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="information-circle"></ion-icon></div></span>About Us</a>
+    <a href="#"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="mail"></ion-icon></div></span>Contact Us</a>
+    <a href="#"><span style="padding-right: 10px;"><div style="width: 22px;height: 22px;"><ion-icon name="newspaper"></ion-icon></div></span>Privacy Policy</a>
+    <a href="javascript:void(0);" id="mc-more" style="display: none;"><span style="padding-right: 10px;"><div style="height: 22px;width: 22px;"><ion-icon name="arrow-down-circle"></ion-icon></div></span>More Pages</a>
+    <div id="mcc-more" style="padding-left: 20px;display: none;">
+      <a href="" style="font-size: 15px">About Us</a>
+      <a href="" style="font-size: 15px">Contact Us</a>
+      <a href="" style="font-size: 15px">Privacy Policy</a>
+    </div>
+    <script type="text/javascript">
+      var mb = document.getElementById("mc-more");
+      var bm = document.getElementById("mcc-more");
+      mb.addEventListener("click", function() {
+        if (bm.style.display === "none") {
+          bm.style.display = "block";
+        }
+        else {
+          bm.style.display = "none";
+        }
+      });
+    </script>
+  </div>
+  </div>
+  <br/>
+<script>
+/* To Disable Inspect Element */
+$(document).bind("contextmenu",function(e) {
+ e.preventDefault();
+});
+
+$(document).keydown(function(e){
+    if(e.which === 123){
+       return false;
+    }
+});
+</script>
+<script>
+document.onkeydown = function(e) {
+if(event.keyCode == 123) {
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
+return false;
+}
+}
+
+</script>
+<script language="JavaScript">
+$(document).bind("contextmenu",function(e) {
+ e.preventDefault();
+});
+$(document).keydown(function(e){
+    if(e.ctrlKey && (e.which === 83)){
+       e.preventDefault();
+       return false;
+    }
+});
+</script>
+<script type="text/javascript">
+   document.addEventListener("keyup", function (e) {
+    var keyCode = e.keyCode ? e.keyCode : e.which;
+            if (keyCode == 44) {
+                stopPrntScr();
+            }
+        });
+function stopPrntScr() {
+
+            var inpFld = document.createElement("input");
+            inpFld.setAttribute("value", ".");
+            inpFld.setAttribute("width", "0");
+            inpFld.style.height = "0px";
+            inpFld.style.width = "0px";
+            inpFld.style.border = "0px";
+            document.body.appendChild(inpFld);
+            inpFld.select();
+            document.execCommand("copy");
+            inpFld.remove(inpFld);
+        }
+       function AccessClipboardData() {
+            try {
+                window.clipboardData.setData('text', "Access   Restricted");
+            } catch (err) {
+            }
+        }
+        setInterval("AccessClipboardData()", 300);
+</script>
+
+</div>
+
+</div>
+
+<script>
+  document.getElementById('thm-btn').addEventListener('click', function () {
+  let g2hg = document.body.classList.toggle('dark-theme');
+  localStorage.setItem('g2hg', g2hg);
+}); 
+
+if(JSON.parse(localStorage.getItem('g2hg')) === false) {
+  document.body.classList.remove('dark-theme');
+}
+</script>
+
+</body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
