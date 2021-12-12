@@ -1,0 +1,112 @@
+body.dark-theme {
+	background: rgb(11,15,27);
+}
+.dark-theme #thm-btn {
+    color: rgb(218,221,228);
+}
+.dark-theme #navm {
+	background: rgba(29,40,71,0.3);
+	border-color: rgb(52,73,131);
+}
+.dark-theme #navm a {
+	color: white;
+}
+/* Mouse Animation */
+.dark-theme .scroll-body .scroll {
+	border:2px solid #fff;
+}
+.dark-theme .scroll-body .scroll::before , .scroll-body .scroll::after {
+	background: #fff;
+}
+.dark-theme .scroll-body .scroll::before {
+	background: #fff;
+}
+.dark-theme .scroll-body .scroll::after {
+	background: #fff;
+}
+/* end Mouse Animation */
+/* box1h */
+.dark-theme #box1h {
+	background: rgb(11,15,27);
+}
+.dark-theme .b1hct {
+	color: white;
+}
+.dark-theme .mail-btn {
+	background: white;
+	color:black;
+}
+/* end box1h */
+
+/* box2a */
+.dark-theme #box2a {
+	background: rgb(19,27,47);
+}
+.dark-theme .b2act {
+	color: white;
+}
+/* end box2a */
+
+/* box3s */
+.dark-theme #box3s {
+	background: rgb(29,40,71);
+}
+.dark-theme .b3sct {
+	color: white;
+}
+/* end box3s */
+/* box4e */
+.dark-theme #box4e {
+	background: rgb(19,27,47);
+}
+.dark-theme .b4ect {
+	color: white;
+}
+.dark-theme #viewr {
+	border:2px solid white;
+	color: white;
+}
+.dark-theme #viewr:hover {
+	color: rgb(19,27,47);
+	background: white;
+}
+.dark-theme .cmpne {
+	
+}
+/* end box4e */
+
+/* box5p */
+.dark-theme #box5p {
+	background: rgb(11,15,27);
+}
+.dark-theme .b5pct {
+	color: white;
+}
+.dark-theme .pjct .ph {
+	color: white;
+}
+.dark-theme .pjct .pp {
+	color: white;
+}
+.dark-theme .pjct .pb {
+	background: transparent;
+	border-color: white;
+	color: white;
+}
+.dark-theme .pjct .pb:hover {
+	background: white;
+	color: rgb(11,15,27);
+}
+/* end box5p */
+
+/* Footer */
+.dark-theme #footer {
+	background: white;
+}
+.dark-theme .fct {
+	color: black;
+}
+.dark-theme #flinks a {
+	color: black;
+}
+/* end Footer */

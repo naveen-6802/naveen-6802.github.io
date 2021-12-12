@@ -1,0 +1,41 @@
+@media only screen and (max-width:500px) {
+	#thm-btn {
+		right: 5px;
+		top: 0px;
+		font-size: 30px;
+	}
+	#navm {
+		display: block;
+	}
+	#navm .bar {
+		float: left;
+		margin-left: 35px;
+	}
+	#navm a {
+		font-size: 15px;
+		margin-left: 7px;
+	}
+	.hnvs {
+		font-size: 40px;
+		text-transform: uppercase;
+	}
+	.hwdd {
+		font-size:24px;
+	}
+	.pjct .ph {
+		font-size: 19px;
+	}
+	.pjct .pp {
+		font-size: 15px;
+	}
+	.pjct .pb {
+		padding: 7px;
+		font-size: 12px;
+	}
+	#skc ul {
+      flex: 1 0 1000px;
+	}
+	.cmpne {
+		width: 95%;
+	}
+}

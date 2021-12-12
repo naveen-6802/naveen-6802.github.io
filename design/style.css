@@ -1,0 +1,468 @@
+* {
+      box-sizing: border-box;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+}
+body {
+      background: white;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cantarell', sans-serif;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+}
+html {
+      scroll-behavior: smooth;
+}
+@media print {
+  html, body {
+    display: none;
+  }
+}
+#thm-btn {
+      text-decoration: none;
+      display: flex;
+      padding: 10px;
+      font-size: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      position: fixed;
+      top: 0px;
+      right: 10px;
+      z-index: 101;
+      color: #444;
+}
+/* Nav */
+#navm {
+      height: auto;
+      padding: 15px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(255,255,255,0.3);
+      backdrop-filter:blur(6.4px);
+      -webkit-backdrop-filter:blur(6.4px);
+      -ms-backdrop-filter:blur(6.4px);
+      border:none;
+      border-bottom: 1px solid #ccc;
+      z-index: 99;
+}
+#navm .bar {
+      display: flex;
+      justify-content: space-around;
+      width: 60%;
+      float: left;
+      margin-righ: 50px;
+}
+#navm a{
+      text-decoration: none;
+      color: black;
+      margin-left: 5px;
+      font-family: 'Quicksand', sans-serif;
+}
+#navm a:hover {
+      text-decoration: underline;
+}
+/* end Nav */
+
+/* box1h */
+#box1h {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: white;
+}
+#b1hc {
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      margin: auto;
+      width: 80%;
+      margin-top: 10%;
+}
+#shs {
+      border:none;
+      border-bottom: 2px solid #7050ef;
+}
+.b1hct {
+      margin-top: -90px;
+      font-size: 35px;
+      color:black;
+      animation: load 400ms 1;
+}
+@keyframes load {
+      0% {
+            opacity: 0;
+            margin-left: -45px;
+            transition: 0.9s ease-in-out;
+      }
+      100% {
+            opacity: 1;
+            margin-left: 0px;
+            transition: 0.9s ease-in-out;
+      }
+}
+.hnvs {
+      font-size: 60px;
+      text-transform: uppercase;
+}
+.hwdd {
+      color: #7050ef;
+      text-transform: uppercase;
+      font-size:44px;
+}
+/* end box1h */
+
+/* box2a */
+#box2a {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: rgb(248,248,248);
+}
+#b2ac {
+      padding: 10px;
+      margin: auto;
+      width: 90%;
+}
+.b2act {
+      color: black;
+}
+.iat {
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+}
+.scroll-body{
+      margin: auto;
+      display: block;
+}
+.scroll-body .scroll{
+      border: 2px solid rgb(11,15,27);
+      width: 25px;
+      height: 40px;
+      border-radius: 15px;
+      display: inline-block;
+      position: relative;
+      font-weight: 700;
+}
+.scroll-body .scroll::before , .scroll-body .scroll::after{
+      background:rgb(11,15,27);
+}
+.scroll-body .scroll::before{
+      display: block;
+      content: '';
+      height: 4px;
+      width: 2px;
+      background: rgb(11,15,27);
+      left: 11px;
+      top: 8px;
+      position: absolute;
+      animation: 2s ease 0s normal none infinite mouse-down;
+      -webkit-animation: 2s ease 0s normal none infinite mouse-down;
+}
+.scroll-body .scroll::after{
+      display: block;
+      content: '';
+      height: 4px;
+      width: 4px;
+      background: rgb(11,15,27);
+      left: 10px;
+      top: 8px;
+      position: absolute;
+      animation: 2s ease 0s normal none infinite mouse-roll;
+      -webkit-animation: 2s ease 0s normal none infinite mouse-roll;
+      border-radius: 50%;
+
+}
+@keyframes mouse-down {
+      0% {
+      height: 4px;
+      }
+      50% {
+      height: 12px;     
+      }
+      100% {
+      height: 4px;
+      }
+}
+@keyframes mouse-roll {
+      0% {
+      top: 8px;
+      }
+      50% {
+      top: 16px;  
+      }
+      100% {
+      top: 8px;
+      }
+}
+/* end box2a */
+
+/* box3s */
+#box3s {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: rgb(242,242,242);
+}
+#b3sc {
+      padding: 10px;
+      margin: auto;
+      width: 100%;
+}
+.b3sct {
+      color: black;
+}
+#skc {
+      display: flex;
+      height: auto;
+      overflow-x: hidden;
+      display: flex;
+      width: 97%;
+      flex-wrap: wrap;
+      margin: auto;
+}
+#skc ul {
+      height: auto;
+      flex: 1 0 50px;
+      margin:0px;
+}
+#skc ul span {
+      text-transform: uppercase;
+      font-weight:bold;
+      font-size:18px;
+}
+#skc ul li {
+      font-size: 17px;
+}
+/* end box3s  */
+
+/* box4e */
+#box4e {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: rgb(248,248,248);
+}
+#b4ec {
+      padding: 10px;
+      margin: auto;
+      width: 100%;
+}
+.b4ect {
+      color: black;
+}
+.cmpne {
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      width: 85%;
+      margin: auto;
+      padding: 20px;
+}
+#viewr {
+      padding: 10px;
+      border:2px solid rgb(29,40,71);
+      color: rgb(29,40,71);
+      background: transparent;
+      cursor: pointer;
+      margin-left: 12%;
+      border-radius: 10px;
+}
+#viewr:hover {
+      background: rgb(29,40,71);
+      color: white;
+      transition: 0.3s;
+}
+/* end box4e */
+
+/* box5p */
+#box5p {
+      margin:0;
+      padding: 0;
+      width: 100%;
+      background: rgb(255,255,255);
+}
+#b5pc {
+      padding: 10px;
+      margin: auto;
+      width: 100%;
+}
+.b5pct {
+      color: black;
+}
+.pjct {
+      height: auto;
+      width: 90%;
+      padding: 25px;
+      border-radius: 2px;
+      background: transparent;
+      margin: auto;
+}
+.pjct .hitme {
+      padding:10px;
+      margin: 10px;
+      position: relative;
+}
+.pjct .ph {
+      font-size: 18px;
+      font-weight: bold;
+      width: auto;
+      transition: 0.5s ease;
+      color: black;
+}
+.arrow1 {
+  animation: slide1 1s ease-in-out infinite;
+  margin-left: 9px;
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
+  }
+}
+
+.pjct .pp {
+      font-size: 14px;
+}
+.pjct .pb {
+      border:1px solid rgb(11,15,27);
+      background: transparent;
+      padding: 6px;
+      font-size: 11px;
+      border-radius: 4px;
+      cursor: pointer;
+}
+.pjct .pb:hover {
+      background: rgb(11,15,27);
+      color: white;
+}
+/* end box5p */
+
+/* Footer */
+#footer {
+      margin:0;
+      padding: 0;
+      width: 100%;
+      background: rgb(11,15,27);
+}
+#fc {
+      padding: 10px;
+      margin: auto;
+      width: 100%;
+}
+.fct {
+      color: white;
+}
+#flinks a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      margin-left: 20px;
+}
+#flinks a:nth-child(1) {
+      margin-left: 0px;
+}
+#flinks a ion-icon:hover, a i:hover {
+      color: #256bfb;
+}
+#nvni {
+      color: white;
+}
+#nvni:hover {
+      color: #256bfb;
+}
+.dark-theme #nvni {
+      color: black;
+}
+.dark-theme #nvni:hover {
+      color: #256bfb;
+}
+/* end Footer */
+
+/* Mail Button  */
+.mail-btn {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      font-family: "Raleway", sans-serif;
+      font-size: 13px;
+      border: none;
+      border-radius: 50px;
+      padding: 15px;
+      transition: 0.3s ease-in-out;
+      background: rgb(11,25,47);
+}
+.mail-btn:hover {
+      transition: 0.3s ease-in-out;
+      border: none;
+      margin-left: 5px;
+}
+.mail-btn:hover:before {
+      transition: 0.3s ease-in-out;
+}
+.mail-btn:before, .mail-btn:after {
+      content: "";
+      position: absolute;
+      top: -14px;
+      right: -12px;
+      width: 80px;
+      height: 20px;
+}
+.mail-btn:before {
+      border: 2px solid #7050ef;
+      background-color: #7050ef;
+      border-radius: 50px;
+      transition: 0.3s ease-in-out;
+}
+.mail-btn:after {
+      content: "Work Together";
+      font-size: 10px;
+      top: -9px;
+      right: -10px;
+      color: white;
+      text-align: center;
+}
+.mail-btn:hover:after {
+      transition: 0.3s ease-in-out;
+}
+/* Mail Button End */
+/* Back to top */
+#btt-m {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgb(0, 0, 0);
+      background: rgba(112, 80, 239, 0.5);
+      width: 50px;
+      height: 50px;
+      display: block;
+      text-decoration: none;
+      border-radius: 35px;
+      display: none;
+      backdrop-filter:blur(6px);
+      -webkit-backdrop-filter:blur(6px);
+      -ms-backdop-filter:blur(6px);
+      z-index: 10000;
+}
+#btt-m ion-icon {
+      color: #fff;
+      margin: 0;
+      position: relative;
+      left: 15.5px;
+      top: 15px;
+      font-size: 19px;
+}
+#btt-m:hover {
+      background: rgba(112, 80, 239, 0.7);
+}
+/* end Back to top */
