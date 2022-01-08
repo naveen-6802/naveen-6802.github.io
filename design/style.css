@@ -271,7 +271,7 @@ html {
       background: transparent;
       cursor: pointer;
       margin-left: 12%;
-      border-radius: 10px;
+      border-radius: 3px;
 }
 #viewr:hover {
       background: rgb(29,40,71);
