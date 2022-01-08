@@ -33,9 +33,12 @@
 		font-size: 12px;
 	}
 	#skc ul {
-      flex: 1 0 1000px;
+      		flex: 1 0 1000px;
 	}
 	.cmpne {
 		width: 95%;
+	}
+	.svc .ph {
+		font-size: 21px;
 	}
 }
