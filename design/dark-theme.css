@@ -75,11 +75,23 @@ body.dark-theme {
 }
 /* end box4e */
 
-/* box5p */
-.dark-theme #box5p {
+/* box5s */
+.dark-theme #box5s {
+	background: rgb(16,22,39);
+}
+.dark-theme .b5sct {
+	color: white;
+}
+.dark-theme .svc .ph {
+	color: white;
+}
+/* end box6p */
+
+/* box6p */
+.dark-theme #box6p {
 	background: rgb(11,15,27);
 }
-.dark-theme .b5pct {
+.dark-theme .b6pct {
 	color: white;
 }
 .dark-theme .pjct .ph {
@@ -97,7 +109,7 @@ body.dark-theme {
 	background: white;
 	color: rgb(11,15,27);
 }
-/* end box5p */
+/* end box6p */
 
 /* Footer */
 .dark-theme #footer {
