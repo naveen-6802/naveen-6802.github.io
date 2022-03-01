@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dogecoin Price</title>
+<style type="text/css">
+* {
+	font-family: arial;
+}
+#prices {
+	margin-top: 3%;
+	display: flex;
+	justify-content: space-around;
+}
+#usdprice, #inrprice {
+	background: rgb(243,240,241);
+	padding: 20px;
+	width: 48%;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 22px;
+}
+#inrprice {
+	margin-left: 2%;
+}
+</style>
+</head>
+<body>
+<center>
+	<img src="https://dogecoin.com/assets/img/dogecoin-300.png" height="100" width="100">
+</center>
+<div id="prices">
+<div id="usdprice">$</div>
+<div id="inrprice">&#8377;</div>
+</div>
+    <script type="text/javascript">
+function getUSDPrice() {
+	let price = document.getElementById("usdprice");
+    let crypto = 'dogecoin';
+    let currency = 'usd';
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET','https://api.coingecko.com/api/v3/simple/price?ids='+crypto+'&vs_currencies='+currency);
+
+    xhr.onload = function(){
+        if (this.status == 200) {
+            data =  JSON.parse(this.responseText);
+            price.innerHTML = "$"+data[crypto][currency]+" "+'';
+            price.style.display = 'block';
+
+        }
+        else{
+            price.innerHTML = 'Error'
+        }
+
+    }
+    xhr.send();
+
+}
+function getINRPrice() {
+	let iprice = document.getElementById("inrprice");
+    let icrypto = 'dogecoin';
+    let icurrency = 'inr';
+    let ihr = new XMLHttpRequest();
+    ihr.open('GET','https://api.coingecko.com/api/v3/simple/price?ids='+icrypto+'&vs_currencies='+icurrency);
+
+    ihr.onload = function(){
+        if (this.status == 200) {
+            data =  JSON.parse(this.responseText);
+            iprice.innerHTML = "&#8377;"+data[icrypto][icurrency]+" "+'';
+            iprice.style.display = 'block';
+
+        }
+        else{
+            iprice.innerHTML = 'Error'
+        }
+
+    }
+    ihr.send();
+
+}
+getUSDPrice();
+getINRPrice();
+
+    </script>
+    <p>
+</body>
+</html>
