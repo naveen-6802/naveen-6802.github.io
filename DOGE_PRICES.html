@@ -8,10 +8,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="icon" href="https://dogecoin.com/assets/img/dogecoin-300.png" type="image/x-icon" sizes="32x32">
 <link rel="icon" href="https://dogecoin.com/assets/img/dogecoin-300.png" type="image/x-icon" sizes="64x64">
-<title>Dogecoin Price</title>
+<title>Ɖogecoin</title>
 <style type="text/css">
 * {
 	font-family: arial;
+}
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
 }
 #prices {
 	margin-top: 3%;
@@ -32,12 +39,14 @@
 </style>
 </head>
 <body>
+<div id="main">
 <center>
 	<img src="https://dogecoin.com/assets/img/dogecoin-300.png" height="100" width="100">
 </center>
 <div id="prices">
 <div id="usdprice">$</div>
 <div id="inrprice">&#8377;</div>
+</div>
 </div>
     <script type="text/javascript">
 function getUSDPrice() {
