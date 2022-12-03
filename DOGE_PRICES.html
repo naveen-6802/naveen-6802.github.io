@@ -8,9 +8,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta http-equiv="refresh" content="3" >
-<link rel="icon" href="https://dogecoin.com/assets/img/dogecoin-300.png" type="image/x-icon" sizes="32x32">
-<link rel="icon" href="https://dogecoin.com/assets/img/dogecoin-300.png" type="image/x-icon" sizes="64x64">
-<title>Ɖogecoin</title>
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/5/53/Shiba_Inu_coin_logo.png" type="image/x-icon" sizes="32x32">
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/5/53/Shiba_Inu_coin_logo.png" type="image/x-icon" sizes="64x64">
+<title>SHIB</title>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style type="text/css">
 * {
@@ -44,7 +44,7 @@
 <body>
 <div id="main">
 <center>
-	<img src="https://dogecoin.com/assets/img/dogecoin-300.png" height="100" width="100">
+	<img src="https://upload.wikimedia.org/wikipedia/en/5/53/Shiba_Inu_coin_logo.png" height="100" width="100">
 </center>
 <div id="prices">
 <div id="usdprice">$</div>
@@ -54,12 +54,12 @@
 <script type="text/javascript">
 $(document).ready(function() {
            
-               $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=usd', function(data) {
-                  $('#usdprice').html('$' + data.dogecoin.usd + '');
+               $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=shiba-inu&vs_currencies=usd', function(data) {
+                  $('#usdprice').html('$' + data.shiba-inu.usd + '');
                });
 
-               $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=inr', function(data) {
-                  $('#inrprice').html('&#8377;' + data.dogecoin.inr + '');
+               $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=shiba-inu&vs_currencies=inr', function(data) {
+                  $('#inrprice').html('&#8377;' + data.shiba-inu.inr + '');
                });
                
 });
