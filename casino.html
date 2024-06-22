@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin:0;
+                padding: 0;
+            }
+            #top {
+                padding: 25px;
+            }
+            #play {
+                padding: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="top">
+            <h3>Available Colors: </h3>
+            <ul>
+                <li>Green</li>
+                <li>Yellow</li>
+                <li>Red</li>
+                <li>Pink</li>
+                <li>Blue</li>
+            </ul>
+        </div>
+        <div id="play">
+            <button id="pbtn" onclick="chngColor()">Play</button>
+            <p>Result is: <span id="result"></span></p>
+        </div>
+        <script>
+            const pbtn = document.getElementById("pbtn");
+            const rslt = document.getElementById("result");
+            const colors = ["Green", "Yellow", "Red", "Pink", "Blue"];
+            
+            function chngColor(e) {
+                let x = Math.floor(Math.random()*colors.length);
+                rslt.textContent = colors[x];
+                
+            }
+
+            function reset() {
+                rslt.textContent = "";
+            }
+
+        </script>
+    </body>
+</html>
