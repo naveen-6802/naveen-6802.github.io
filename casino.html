@@ -6,6 +6,7 @@
             body {
                 margin:0;
                 padding: 0;
+                font-family: arial;
             }
             #top {
                 padding: 25px;
@@ -13,34 +14,83 @@
             #play {
                 padding: 25px;
             }
+            ul {
+                list-style: none;
+            }
+            ul li {
+                padding: 10px;
+                background: #758ff4;
+                color: white;
+                display: inline-block;
+                text-align: center;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            ul li:hover {
+                transform: scale(1.20);
+            }
+            #selectColor {
+                padding: 5px;
+                border: 1px solid black;
+                background:white;
+            }
         </style>
     </head>
     <body>
         <div id="top">
-            <h3>Available Colors: </h3>
+            <h3>Please select a color below</h3>
+            <input type="text" disabled value="" id="selectColor">
             <ul>
-                <li>Green</li>
-                <li>Yellow</li>
-                <li>Red</li>
-                <li>Pink</li>
-                <li>Blue</li>
+                <li onclick="g()">Green</li>
+                <li onclick="y()">Yellow</li>
+                <li onclick="r()">Red</li>
+                <li onclick="p()">Pink</li>
+                <li onclick="b()">Blue</li>
             </ul>
         </div>
         <div id="play">
             <button id="pbtn" onclick="chngColor()">Play</button>
             <p>Result is: <span id="result"></span></p>
+            <p id="wOrL"></p>
         </div>
         <script>
             const pbtn = document.getElementById("pbtn");
             const rslt = document.getElementById("result");
+            const sC = document.getElementById("selectColor");
             const colors = ["Green", "Yellow", "Red", "Pink", "Blue"];
+            const wL = document.getElementById("wOrL");
             
             function chngColor(e) {
-                let x = Math.floor(Math.random()*colors.length);
-                rslt.textContent = colors[x];
+                if(sC.value === "") {
+                    rslt.textContent = "Please select a color";
+                }
+                else {
+                    let x = Math.floor(Math.random()*colors.length);
+                    rslt.textContent = colors[x];
+                }
+                if(rslt.textContent === sC.value) {
+                    wL.textContent = "HURRAY !! You Win";
+                }
+                else {
+                    wL.textContent = "Sorry, try again later.";
+                }
                 
             }
-
+            function g() {
+                sC.value = "Green";
+            }
+            function y() {
+                sC.value = "Yellow";
+            }
+            function r() {
+                sC.value = "Red";
+            }
+            function p() {
+                sC.value = "Pink";
+            }
+            function b() {
+                sC.value = "Blue";
+            }
             function reset() {
                 rslt.textContent = "";
             }
