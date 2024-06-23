@@ -3,65 +3,164 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+            * {
+                border:none;
+                margin: 0;
+                padding: 0;
+            }
             body {
                 margin:0;
                 padding: 0;
                 font-family: arial;
+                background-color: rgb(26, 44, 56);
+            }
+            #playerConsole {
+                background: white;
+                width: 40%;
+                margin: auto;
+                display: block;
+                height: 90%;
+                max-height: 90%;
+                padding: 10px;
+                border:none;
+                border-radius: 6px;
+                margin-top: 3%;
+            }
+            header {
+                background-color: rgb(26, 44, 56);
+                box-shadow: rgba(110, 110, 110, 0.1) 0px 7px 29px 0px;
+                padding: 20px;
+                display: flex;
+                justify-content: space-around;
+                max-width: 100%;
+                overflow: hidden;
+                font-size: 21px;
+                color: white;
             }
             #top {
                 padding: 25px;
-            }
-            #play {
-                padding: 25px;
+                margin: auto;
+                display: block;
             }
             ul {
                 list-style: none;
             }
-            ul li {
-                padding: 10px;
-                background: #758ff4;
+            ul button {
+                padding: 6px 12px;
+                background: rgb(234, 237, 246);
                 color: white;
                 display: inline-block;
                 text-align: center;
-                border-radius: 5px;
+                border-radius: 6px;
+                font-size: 12px;
                 cursor: pointer;
+                color: rgb(122,126,136)
             }
-            ul li:hover {
+            ul button:hover {
                 transform: scale(1.20);
+                border:none;
             }
             #selectColor {
                 padding: 5px;
                 border: 1px solid black;
                 background:white;
+                margin-top:10px;
+            }
+            #pbtn {
+                background: rgb(37,80,250);
+                border: 2px solid rgb(37,80,250);
+                color:white;
+                padding: 18px;
+                border-radius: 6px;
+                cursor: pointer;
+                outline: 0;
+                font-size:13px;
+                display: inline-block;
+            }
+            #blnc {
+                color:lightgreen;
+            }
+            #betAmt, #selectColor {
+                background-color: rgb(234, 237, 246);
+                padding: 15px;
+                border: 2px solid rgb(85,112,134);
+                border-radius: 6px;
+                outline: 0;
+            }
+            #betAmt:focus, #selectColor:focus {
+                border-color: rgb(47, 69, 83);
+            }
+            #betAmt, #selectColor, #pbtn {
+                width: 90%;
+                display: inline-block;
+                box-sizing: border-box;
+            }
+            button[disabled] {
+                background-color: rgb(204, 207, 216);
+            }
+            #reS {
+                border: 3px solid rgb(37,80,250);
+                border-radius: 4px;
+                text-align: center;
+                padding: 10px;
+                height: auto;
+                width: 30%;
+                display: none;
+                background-color: white;
+                color: #000;
+            }
+            @media only screen and (max-width:500px) {
+                #playerConsole {
+                    width: 90%;
+                }
             }
         </style>
     </head>
     <body>
-        <div id="top">
-            <h3>Please select a color below</h3>
-            <input type="text" disabled value="" id="selectColor">
-            <ul>
-                <li onclick="g()">Green</li>
-                <li onclick="y()">Yellow</li>
-                <li onclick="r()">Red</li>
-                <li onclick="p()">Pink</li>
-                <li onclick="b()">Blue</li>
-            </ul>
+        <header>Casino <p style="font-size: 16px;">Balance: $<span id="blnc">0.00</span></p></header>
+
+        <div id="playerConsole">
+
+            <div id="top">
+                <h4>Please select a color below</h4>
+                <input type="text" disabled value="" id="selectColor" placeholder="Select a Color Below">
+                <br/><br/>
+                <center>
+                <ul>
+                    <button onclick="g()" id="g">Green</button>
+                    <button onclick="y()" id="y">Yellow</button>
+                    <button onclick="r()" id="r">Red</button>
+                </ul>
+                </center>
+                <br/>
+                <input type="text" id="betAmt" placeholder="0.00">
+                <br/><br/>
+                <button id="pbtn" onclick="chngColor()">Bet</button>
+                <br/><br/>
+                <center>
+                    <div id="reS">
+                        <span id="result"></span></p>
+                        <p id="wOrL"></p>
+                    </div>
+                </center>   
+            </div>
+       
         </div>
-        <div id="play">
-            <button id="pbtn" onclick="chngColor()">Play</button>
-            <p>Result is: <span id="result"></span></p>
-            <p id="wOrL"></p>
-        </div>
+        
         <script>
             const pbtn = document.getElementById("pbtn");
             const rslt = document.getElementById("result");
             const sC = document.getElementById("selectColor");
-            const colors = ["Green", "Yellow", "Red", "Pink", "Blue"];
+            const colors = ["Green", "Yellow", "Red"];
             const wL = document.getElementById("wOrL");
-            
+            const blnc = document.getElementById("blnc");
+            const reS = document.getElementById("reS");
+            let betAmt = document.getElementById("betAmt");
+            let money = 500;
+            blnc.textContent = money;
             function chngColor(e) {
                 if(sC.value === "") {
+                    reS.style.display = "block";
                     rslt.textContent = "Please select a color";
                 }
                 else {
@@ -69,27 +168,44 @@
                     rslt.textContent = colors[x];
                 }
                 if(rslt.textContent === sC.value) {
-                    wL.textContent = "HURRAY !! You Win";
+                    reS.style.display = "block";
+                    wL.innerHTML = "2.00x <br/>" + "$"+ betAmt.value*2;
+                    money -= betAmt.value;
+                    money += parseFloat(betAmt.value*2);
+                    blnc.textContent = money;
                 }
                 else {
-                    wL.textContent = "Sorry, try again later.";
+                    if(sC.value === "") {
+                        wL.textContent = "";
+                    }
+                    else {
+                        reS.style.display = "block";
+                        wL.textContent = "0.00x";
+                        money -= betAmt.value;
+                        blnc.textContent = money;
+                    }
                 }
-                
+                document.getElementById("g").disabled = false;
+                document.getElementById("y").disabled = false;
+                document.getElementById("r").disabled = false;
             }
             function g() {
                 sC.value = "Green";
+                document.getElementById("g").disabled = true;
+                document.getElementById("y").disabled = true;
+                document.getElementById("r").disabled = true;
             }
             function y() {
                 sC.value = "Yellow";
+                document.getElementById("g").disabled = true;
+                document.getElementById("y").disabled = true;
+                document.getElementById("r").disabled = true;
             }
             function r() {
                 sC.value = "Red";
-            }
-            function p() {
-                sC.value = "Pink";
-            }
-            function b() {
-                sC.value = "Blue";
+                document.getElementById("g").disabled = true;
+                document.getElementById("y").disabled = true;
+                document.getElementById("r").disabled = true;
             }
             function reset() {
                 rslt.textContent = "";
